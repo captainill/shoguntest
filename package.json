@@ -1,0 +1,27 @@
+{
+  "name": "ultratext",
+  "description": "",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:captainill/ultratext-web.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-crx-auto-reload": "~1.0.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.5.1",
+    "browserify": "~4.1.11",
+    "watchify": "~0.10.2",
+    "reactify": "~0.13.1",
+    "react": "~0.10.0 "
+  },
+  "scripts": {
+    "bundle": "./node_modules/.bin/browserify -t reactify blocks/app/assets/javascripts/main.jsx > blocks/app/assets/javascripts/bundle.js.erb",
+    "watch-js": "./node_modules/.bin/watchify -t reactify blocks/app/assets/javascripts/main.jsx -o blocks/app/assets/javascripts/bundle.js.erb",
+    "gif-js": "./node_modules/.bin/watchify -t reactify blocks/app/assets/javascripts/gif.js -o blocks/app/assets/javascripts/gifbundle.js.erb",
+    "start": "npm run watch-js & npm run gif-js"
+  }
+}

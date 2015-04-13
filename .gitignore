@@ -1,0 +1,6 @@
+.DS_Store
+.vagrant
+/node_modules
+shogun/tmp
+shogun/npm-debug.log
+shogun/log/
