@@ -43,3 +43,6 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'shogun_rails', github: 'getshogun/shogun_rails'
+
+gem 'figaro'
